@@ -9,7 +9,7 @@ from detectarTexto import detectar_texto
 model = torch.hub.load('yolov5', 'custom', path='yolov5/runs/train/exp/weights/best.pt',force_reload=True, source='local')
 
 # Cargar imagen original
-img = Image.open('imagenes-prueba/img3.jpg')
+img = Image.open('imagenes-prueba/img2.jpg')
 
 # Detectar objetos
 results = model(img)
@@ -30,7 +30,8 @@ if len(df) > 0:
     plate_img = img.crop((x1, y1, x2, y2))
     plate_img.save("placa_recortada.jpg")
 
-    detectar_texto()
+    print("TERMINA SCRIPT 1")
+    detectar_texto(plate_img)
 
 else:
     print("No se detectó ninguna placa en la imagen.")
