@@ -50,7 +50,7 @@ def verificar_placa(texto):
         r"^(CD|CC)([-]|[ -]| [- ]|[ - ])\d{3,4}$",
         r"^(OF|OFICIAL)([-]|[ -]| [- ]|[ - ])\d+$",
         r"^[A-Za-z0-9]+-[A-Za-z0-9]+-[A-Za-z0-9]+$",
-        r"^[A-Za-z0-9]+-[A-Za-z0-9]+$",
+        r"^[A-Za-z0-9]+-[A-Za-z0-9]+$"
     }
 
     texto = texto.strip().upper()
